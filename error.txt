@@ -1,0 +1,7 @@
+CMake Error at solver_application/CMakeLists.txt:2 (target_link_libraries):
+  Target "solver" of type EXECUTABLE may not be linked into another target.
+  One may link only to INTERFACE, OBJECT, STATIC or SHARED libraries, or to
+  executables with the ENABLE_EXPORTS property set.
+
+
+-- Configuring incomplete, errors occurred!
