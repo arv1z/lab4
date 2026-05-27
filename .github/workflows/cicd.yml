@@ -11,13 +11,16 @@ jobs:
         exclude:
           - os: windows-latest
             compiler: g++
+
     runs-on: ${{ matrix.os }}
 
     steps:
       - uses: actions/checkout@v4
 
+      - name: Configure
+        run: cmake -S . -B build -DCMAKE_CXX_COMPILER=${{ matrix.compiler }}
+        shell: bash
+
       - name: Build
-        run: |
-          cmake -S . -B build
-          cmake --build build
+        run: cmake --build build
         shell: bash
